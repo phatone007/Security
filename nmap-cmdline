@@ -1,0 +1,1 @@
+nmap -sC -p445 --open --max-hostgroup 3 --script smb-vuln-ms17-010.nse
