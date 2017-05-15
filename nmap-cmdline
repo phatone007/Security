@@ -1,16 +1,16 @@
-# CVE-2017-0143 MS17-010 Scaning
-# The vulnerability that uses WannaCry Ransomware
+# Scan for CVE-2017-0143 MS17-010
+# The vulnerability used by WannaCry Ransomware
 # 
-# Use @calderpwn's script
-# http://seclists.org/nmap-dev/2017/q2/79
+# 1. Use @calderpwn's script
+#    http://seclists.org/nmap-dev/2017/q2/79
 # 
-# Save it to Nmap NSE script directory
-# Linux
-# /usr/share/nmap/scripts/ or /usr/local/share/nmap/scripts/
-# OSX
-# /opt/local/share/nmap/scripts/
-#
+# 2. Save it to Nmap NSE script directory
+#    Linux - /usr/share/nmap/scripts/ or /usr/local/share/nmap/scripts/
+#    OSX - /opt/local/share/nmap/scripts/
+# 
+# Note: 
 # I had to use "--max-hostgroup 3", otherwise the script misses vulnerable hosts using nmap 7.30 on OS X
+# Don't use "-T4", this also caused the script to miss vulnerable hosts
 # 
 # Find a test range via ShodanHQ
 # https://www.shodan.io/search?query=port%3A445+os%3A%22Windows+Server+2003%22
